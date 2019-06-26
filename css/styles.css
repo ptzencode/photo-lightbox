@@ -1,0 +1,77 @@
+
+/* =================================
+  Base Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 1.5em 0;
+    z-index: 1000;
+}
+
+main {
+    padding-top: 7em;
+}
+
+input {
+    width: 85%;
+    padding: 0.5em;
+    outline: 0;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input:focus,
+input:hover {
+    border-color: #000;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ul {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 200px;
+    margin: 0 30px 60px;
+}
+
+
+
