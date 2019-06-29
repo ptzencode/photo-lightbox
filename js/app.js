@@ -18,9 +18,12 @@ $overlay.append($closeBtn, $prevBtn, $wrapper, $nextBtn, $caption);
 //Add overlay to page
 $overlay.insertAfter($('main'));
 
-
-
-
+//capturing the click event on a link in the gallery list item
+$("#gallery a").click(function(event) {
+    event.preventDefault();
+    let theLinkToShow = $(this);
+    lightboxShow(theLinkToShow);
+});
 
 
 
