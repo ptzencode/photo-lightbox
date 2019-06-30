@@ -18,6 +18,27 @@ $overlay.append($closeBtn, $prevBtn, $wrapper, $nextBtn, $caption);
 //Add overlay to page
 $overlay.insertAfter($('main'));
 
+
+function lightboxShow(linkToShow) {
+    let linkLocation = linkToShow.attr("href");
+    $container.empty();
+
+    //Add img to container
+    $image.attr("src", linkLocation);
+    $container.append($image);
+
+    let captionText = linkToShow.children("img").attr("title");
+    $caption.text(captionText);
+
+    //remove 'selected' class from previously selected list item
+    $("#gallery li.selected").removeClass("selected");
+    //add 'selected' class to the parent list item of current link displayed
+    linkToShow.closest("li").addClass("selected");
+
+    $overlay.show();
+}
+
+
 //capturing the click event on a link in the gallery list item
 $("#gallery a").click(function(event) {
     event.preventDefault();
