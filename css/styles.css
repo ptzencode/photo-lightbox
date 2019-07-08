@@ -168,6 +168,28 @@ button:disabled {
         width: 460px;
     }
 
+    .wrapper {
+    width: 70%;
+    margin: 4em 0.75em 1.25em;
+    }
+
+    #overlay p {
+    font-size: 1em;
+    width: 55%;
+    }
+
+    button {
+    margin-top: 2em;
+    font-size: 1.3em;
+    width: 40px;
+    height: 40px;
+    }
+
+    .btn-close {
+    right: 0.3em;
+    top: 0.3em;
+    }
+
 }
 
 
