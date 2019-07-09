@@ -203,6 +203,28 @@ button:disabled {
         float: left;
     }
 
+    .wrapper {
+    width: 65%;
+    max-width: 750px;
+    margin: 3em 1em 1.5em;
+    }
+
+    #overlay p {
+    max-width: 600px;
+    }
+
+    button {
+    margin-top: 1em;
+    font-size: 1.6em;
+    width: 50px;
+    height: 50px;
+    }
+
+    .btn-close {
+    right: 0.5em;
+    top: 0.5em;
+    }
+
 }
 
 
