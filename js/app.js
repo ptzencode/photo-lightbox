@@ -39,6 +39,23 @@ function lightboxShow(linkToShow) {
 }
 
 
+function showPrevious() {
+    let prevLink = $("#gallery li.selected").prev().children("a");
+    lightboxShow(prevLink);
+}
+
+
+function showNext() {
+    let nextLink = $("#gallery li.selected").next().children("a");
+    lightboxShow(nextLink);
+}
+
+
+function closeLightbox() {
+    $overlay.hide();
+}
+
+
 //capturing the click event on a link in the gallery list item
 $("#gallery a").click(function(event) {
     event.preventDefault();
@@ -46,7 +63,10 @@ $("#gallery a").click(function(event) {
     lightboxShow(theLinkToShow);
 });
 
-
+//click on overlay buttons
+$closeBtn.click(closeLightbox);
+$prevBtn.click(showPrevious);
+$nextBtn.click(showNext);
 
 
 
