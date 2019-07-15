@@ -35,6 +35,8 @@ function lightboxShow(linkToShow) {
     //add 'selected' class to the parent list item of current link displayed
     linkToShow.closest("li").addClass("selected");
 
+    setBtnControls();
+
     $overlay.show();
 }
 
@@ -53,6 +55,21 @@ function showNext() {
 
 function closeLightbox() {
     $overlay.hide();
+}
+
+
+function setBtnControls() {
+    $prevBtn.prop("disabled", false);
+    $nextBtn.prop("disabled", false);
+    let selectedLi = $("#gallery li.selected");
+    //check for first list item and disable prevbtn
+    //check for last list item and disable nextbtn
+    if ( selectedLi.prev().length === 0 ) {
+        $prevBtn.prop("disabled", true);
+    } else if ( selectedLi.next().length === 0 ) {
+        $nextBtn.prop("disabled", true);
+    }
+    return;
 }
 
 
