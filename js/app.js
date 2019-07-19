@@ -73,6 +73,22 @@ function setBtnControls() {
 }
 
 
+//keyboard controls
+$(document).keyup(function(event) {
+    if ( $overlay.is(":visible") ) {
+        if ( event.which == '37' && $prevBtn.is(":enabled") ) {
+            //left arrow will not work on first item, where prevbtn is disabled
+            showPrevious();
+        } else if ( event.which == '39' && $nextBtn.is(":enabled") ) {
+            showNext();
+        } else if (event.which == '27') {
+            //esc to close
+            closeLightbox();
+        }
+    }
+});
+
+
 //capturing the click event on a link in the gallery list item
 $("#gallery a").click(function(event) {
     event.preventDefault();
