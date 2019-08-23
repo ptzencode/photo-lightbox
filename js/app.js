@@ -101,7 +101,20 @@ $closeBtn.click(closeLightbox);
 $prevBtn.click(showPrevious);
 $nextBtn.click(showNext);
 
+//Search function
+$("#user_input").keyup(function() {
+    let userEntry = $(this).val().toLowerCase();
 
+    $("#gallery li").each(function() {
+        let titleContent = $(this).find("img").attr("title").toLowerCase();
+        if ( titleContent.indexOf(userEntry) !== -1 ) {
+            //show matches
+            $(this).show("slow");
+        } else {
+            $(this).slideUp();
+        }
+    });
+});
 
 
 
